@@ -10,3 +10,4 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\De
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmSplash.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmLogin.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmMenuPrincipal.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmFuncionarios.resources
