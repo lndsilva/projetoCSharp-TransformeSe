@@ -33,5 +33,16 @@ namespace LojaABC
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+
+        private void tmrSplash_Tick(object sender, EventArgs e)
+        {
+            if (pgbSplash.Value < 100)
+            {
+                pgbSplash.Value = pgbSplash.Value + 10;
+                lblNumero.Text = pgbSplash.Value.ToString() + " %";
+                
+            }  
+            
+        }
     }
 }
