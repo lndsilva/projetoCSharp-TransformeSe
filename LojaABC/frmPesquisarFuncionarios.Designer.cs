@@ -145,6 +145,7 @@ namespace LojaABC
             this.Name = "frmPesquisarFuncionarios";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LojaABC - Pesquisar funcionários";
+            this.Load += new System.EventHandler(this.frmPesquisarFuncionarios_Load);
             this.gpbPesquisarPor.ResumeLayout(false);
             this.gpbPesquisarPor.PerformLayout();
             this.ResumeLayout(false);

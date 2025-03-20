@@ -12,3 +12,4 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\De
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmMenuPrincipal.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmFuncionarios.resources
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmPesquisarFuncionarios.resources
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmSobreNos.resources
