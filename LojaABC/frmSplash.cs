@@ -41,7 +41,15 @@ namespace LojaABC
                 pgbSplash.Value = pgbSplash.Value + 10;
                 lblNumero.Text = pgbSplash.Value.ToString() + " %";
                 
-            }  
+            }
+            else
+            {
+                frmLogin abrir = new frmLogin();
+                abrir.Show();
+                this.Hide();
+                tmrSplash.Enabled = false;
+
+            }
             
         }
     }
