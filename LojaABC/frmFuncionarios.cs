@@ -115,7 +115,7 @@ namespace LojaABC
             mskCEP.Clear();
             txtCidade.Clear();
             txtEsdado.Clear();
-            cbbUF.Items.Clear();
+            cbbUF.Text = "";
             txtComplemento.Clear();
 
             txtNome.Focus();
@@ -153,7 +153,15 @@ namespace LojaABC
                 MessageBox.Show("Cadastrado com sucesso!!!");
                 limparCampos();
                 desabilitarCampos();
+                btnNovo.Enabled = true;
+                btnNovo.Focus();
             }
+        }
+
+        private void btnPesquisar_Click(object sender, EventArgs e)
+        {
+            frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
+            abrir.ShowDialog();
         }
     }
 }
