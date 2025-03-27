@@ -55,6 +55,7 @@
             this.lblNumero1.Size = new System.Drawing.Size(78, 20);
             this.lblNumero1.TabIndex = 0;
             this.lblNumero1.Text = "Número 1";
+          
             // 
             // lblNumero2
             // 
@@ -125,7 +126,6 @@
             this.rdbDividir.Name = "rdbDividir";
             this.rdbDividir.Size = new System.Drawing.Size(69, 24);
             this.rdbDividir.TabIndex = 6;
-            this.rdbDividir.TabStop = true;
             this.rdbDividir.Text = "Dividir";
             this.rdbDividir.UseVisualStyleBackColor = true;
             // 
@@ -136,7 +136,6 @@
             this.rdbMultiplicar.Name = "rdbMultiplicar";
             this.rdbMultiplicar.Size = new System.Drawing.Size(97, 24);
             this.rdbMultiplicar.TabIndex = 5;
-            this.rdbMultiplicar.TabStop = true;
             this.rdbMultiplicar.Text = "Multiplicar";
             this.rdbMultiplicar.UseVisualStyleBackColor = true;
             // 
@@ -147,7 +146,6 @@
             this.rdbSubtrair.Name = "rdbSubtrair";
             this.rdbSubtrair.Size = new System.Drawing.Size(83, 24);
             this.rdbSubtrair.TabIndex = 4;
-            this.rdbSubtrair.TabStop = true;
             this.rdbSubtrair.Text = "Subtrair";
             this.rdbSubtrair.UseVisualStyleBackColor = true;
             // 
@@ -158,7 +156,6 @@
             this.rdbSomar.Name = "rdbSomar";
             this.rdbSomar.Size = new System.Drawing.Size(74, 24);
             this.rdbSomar.TabIndex = 3;
-            this.rdbSomar.TabStop = true;
             this.rdbSomar.Text = "Somar";
             this.rdbSomar.UseVisualStyleBackColor = true;
             // 
@@ -174,6 +171,7 @@
             this.btnCalcular.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCalcular.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // btnLimpar
             // 
@@ -203,7 +201,7 @@
             this.btnSair.UseVisualStyleBackColor = true;
             this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
-            // Form1
+            // frmCalculadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -221,7 +219,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "frmCalculadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Calculadora";
             this.Load += new System.EventHandler(this.Form1_Load);
