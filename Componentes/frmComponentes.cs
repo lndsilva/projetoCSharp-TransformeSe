@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -76,5 +77,41 @@ namespace Componentes
                 ltbListarProdutos.Items.RemoveAt(0);
             }
         }
+
+        private void btnCarregar_Click(object sender, EventArgs e)
+        {
+            string origemCompleto = "";
+            string foto = "";
+            string pastaDestino = "";
+            string destinoCompleto = "";
+
+            if (ofdCarregar.ShowDialog() == DialogResult.OK)
+            {
+                origemCompleto = ofdCarregar.FileName;
+                foto = ofdCarregar.SafeFileName;
+                destinoCompleto = pastaDestino + foto;
+            }
+            if (File.Exists(destinoCompleto))
+            {
+                if (MessageBox.Show("Arquivo já existe, deseja substituir?",
+                    "Substituir", MessageBoxButtons.YesNo) == DialogResult.No)
+                {
+                    return;
+                }
+                System.IO.File.Copy(origemCompleto, destinoCompleto, true);
+                if (File.Exists(destinoCompleto))
+                {
+                    pcbImagens.ImageLocation = destinoCompleto;
+                    MessageBox.Show(destinoCompleto);
+                }
+                else
+                {
+                    MessageBox.Show("Arquivo não copiado.");
+                }
+
+            }
+
+        }
+
     }
 }
