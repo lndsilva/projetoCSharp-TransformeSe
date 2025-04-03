@@ -35,6 +35,8 @@ namespace Componentes
             if (ckbLivros.Checked)
             {
                 ltbListarProdutos.Items.Add("Livros");
+                pcbImagens.Load(@".\imagens\agenda.png");
+
             }
             else
             {
@@ -47,6 +49,7 @@ namespace Componentes
             if (ckbComputador.Checked)
             {
                 ltbListarProdutos.Items.Add("Computador");
+                pcbImagens.Load(@".\imagens\computador.png");
             }
             else
             {
@@ -59,6 +62,7 @@ namespace Componentes
             if (ckbMesa.Checked)
             {
                 ltbListarProdutos.Items.Add("Mesa");
+                pcbImagens.Load(@".\imagens\mesa.png");
             }
             else
             {
@@ -71,6 +75,7 @@ namespace Componentes
             if (ckbBanana.Checked)
             {
                 ltbListarProdutos.Items.Add("Banana");
+                pcbImagens.Load(@".\imagens\banana.png");
             }
             else
             {
@@ -80,38 +85,26 @@ namespace Componentes
 
         private void btnCarregar_Click(object sender, EventArgs e)
         {
-            string origemCompleto = "";
-            string foto = "";
-            string pastaDestino = "";
-            string destinoCompleto = "";
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.Title = "Selecione um imagem";
+            ofd.Filter = "Imagens|*.jpg;*.jpeg;*.png;*.bmp|Todos os arquivos|*.*";
 
-            if (ofdCarregar.ShowDialog() == DialogResult.OK)
+            if (ofd.ShowDialog() == DialogResult.OK)
             {
-                origemCompleto = ofdCarregar.FileName;
-                foto = ofdCarregar.SafeFileName;
-                destinoCompleto = pastaDestino + foto;
-            }
-            if (File.Exists(destinoCompleto))
-            {
-                if (MessageBox.Show("Arquivo já existe, deseja substituir?",
-                    "Substituir", MessageBoxButtons.YesNo) == DialogResult.No)
-                {
-                    return;
-                }
-                System.IO.File.Copy(origemCompleto, destinoCompleto, true);
-                if (File.Exists(destinoCompleto))
-                {
-                    pcbImagens.ImageLocation = destinoCompleto;
-                    MessageBox.Show(destinoCompleto);
-                }
-                else
-                {
-                    MessageBox.Show("Arquivo não copiado.");
-                }
-
+                pcbImagens.ImageLocation = ofd.FileName;
+                pcbImagens.Load();
             }
 
         }
 
+        private void btnSair_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            pcbImagens.Image = null;
+        }
     }
 }

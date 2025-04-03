@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmComponentes));
             this.gpbComponentes = new System.Windows.Forms.GroupBox();
-            this.txtExibeDiretorio = new System.Windows.Forms.TextBox();
             this.btnCarregar = new System.Windows.Forms.Button();
             this.pcbImagens = new System.Windows.Forms.PictureBox();
             this.ckbBanana = new System.Windows.Forms.CheckBox();
@@ -44,14 +43,17 @@
             this.lblListarProdutos = new System.Windows.Forms.Label();
             this.txtNome = new System.Windows.Forms.TextBox();
             this.lblNome = new System.Windows.Forms.Label();
-            this.ofdCarregar = new System.Windows.Forms.OpenFileDialog();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.btnLimpar = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
             this.gpbComponentes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pcbImagens)).BeginInit();
             this.SuspendLayout();
             // 
             // gpbComponentes
             // 
-            this.gpbComponentes.Controls.Add(this.txtExibeDiretorio);
+            this.gpbComponentes.Controls.Add(this.btnSair);
+            this.gpbComponentes.Controls.Add(this.btnLimpar);
             this.gpbComponentes.Controls.Add(this.btnCarregar);
             this.gpbComponentes.Controls.Add(this.pcbImagens);
             this.gpbComponentes.Controls.Add(this.ckbBanana);
@@ -73,28 +75,23 @@
             this.gpbComponentes.TabStop = false;
             this.gpbComponentes.Text = "Componentes";
             // 
-            // txtExibeDiretorio
-            // 
-            this.txtExibeDiretorio.Location = new System.Drawing.Point(244, 485);
-            this.txtExibeDiretorio.Name = "txtExibeDiretorio";
-            this.txtExibeDiretorio.Size = new System.Drawing.Size(222, 26);
-            this.txtExibeDiretorio.TabIndex = 10;
-            // 
             // btnCarregar
             // 
             this.btnCarregar.Location = new System.Drawing.Point(244, 426);
             this.btnCarregar.Name = "btnCarregar";
             this.btnCarregar.Size = new System.Drawing.Size(222, 44);
             this.btnCarregar.TabIndex = 9;
-            this.btnCarregar.Text = "&Carregar";
+            this.btnCarregar.Text = "&Carregar imagem";
             this.btnCarregar.UseVisualStyleBackColor = true;
             this.btnCarregar.Click += new System.EventHandler(this.btnCarregar_Click);
             // 
             // pcbImagens
             // 
+            this.pcbImagens.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pcbImagens.Location = new System.Drawing.Point(245, 255);
             this.pcbImagens.Name = "pcbImagens";
             this.pcbImagens.Size = new System.Drawing.Size(221, 151);
+            this.pcbImagens.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pcbImagens.TabIndex = 8;
             this.pcbImagens.TabStop = false;
             // 
@@ -204,11 +201,29 @@
             this.lblNome.TabIndex = 0;
             this.lblNome.Text = "Nome";
             // 
-            // ofdCarregar
+            // openFileDialog1
             // 
-            this.ofdCarregar.FileName = "openFileDialog1";
-            this.ofdCarregar.Filter = "*.BMP;*.JPG;*.GIF,*.PNG,*.TIFF)|*.BMP;*.JPG;*.GIF;*.PNG;*.TIFF|\" & \"All files (*." +
-    "*)|*.*";
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // btnLimpar
+            // 
+            this.btnLimpar.Location = new System.Drawing.Point(245, 485);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(222, 44);
+            this.btnLimpar.TabIndex = 10;
+            this.btnLimpar.Text = "&Limpar imagem";
+            this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
+            // 
+            // btnSair
+            // 
+            this.btnSair.Location = new System.Drawing.Point(245, 538);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(222, 44);
+            this.btnSair.TabIndex = 11;
+            this.btnSair.Text = "&Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // frmComponentes
             // 
@@ -245,7 +260,8 @@
         private System.Windows.Forms.TextBox txtNome;
         private System.Windows.Forms.PictureBox pcbImagens;
         private System.Windows.Forms.Button btnCarregar;
-        private System.Windows.Forms.TextBox txtExibeDiretorio;
-        private System.Windows.Forms.OpenFileDialog ofdCarregar;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnLimpar;
     }
 }

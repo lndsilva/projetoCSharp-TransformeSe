@@ -30,6 +30,15 @@ namespace LojaABC
             desabilitarCampos();
         }
 
+        public frmFuncionarios(string descricao)
+        {
+            InitializeComponent();
+            //executando desabilitar os campos
+            desabilitarCampos();
+            txtNome.Text = descricao;
+        }
+
+
         private void btnVoltar_Click(object sender, EventArgs e)
         {
             frmMenuPrincipal abrir = new frmMenuPrincipal();
@@ -161,7 +170,8 @@ namespace LojaABC
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             frmPesquisarFuncionarios abrir = new frmPesquisarFuncionarios();
-            abrir.ShowDialog();
+            abrir.Show();
+            this.Hide();
         }
     }
 }

@@ -48,6 +48,15 @@ namespace LojaABC
             limparCampos();
         }
 
+        //habilitar campos
+        public void habilitarCampos()
+        {
+            txtDescricao.Enabled = true;
+            btnLimpar.Enabled = true;
+            btnPesquisar.Enabled = true;
+            txtDescricao.Focus();
+        }
+
         //criando o método limpar campos
         public void limparCampos()
         {
@@ -56,15 +65,50 @@ namespace LojaABC
             ltbPesquisar.Items.Clear();
             txtDescricao.Clear();
             txtDescricao.Focus();
+            txtDescricao.Enabled = false;
+        }
+
+        //criando o método limpar campos pesquisar
+        public void limparCampos_pesquisar()
+        {
+            rdbCodigo.Checked = false;
+            rdbNome.Checked = false;
+            txtDescricao.Clear();
+            txtDescricao.Focus();
+            txtDescricao.Enabled = false;
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
             ltbPesquisar.Items.Clear();
             ltbPesquisar.Items.Add(txtDescricao.Text);
+            limparCampos_pesquisar();
            
         }
 
-       
+        private void rdbCodigo_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarCampos();
+        }
+
+        private void rdbNome_CheckedChanged(object sender, EventArgs e)
+        {
+            habilitarCampos();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frmFuncionarios abrir = new frmFuncionarios("Senac");
+            abrir.Show();
+            this.Hide();
+        }
+
+        private void ltbPesquisar_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string descricao = ltbPesquisar.SelectedItem.ToString();
+            frmFuncionarios abrir = new frmFuncionarios(descricao);
+            abrir.Show();
+            this.Hide();
+        }
     }
 }
