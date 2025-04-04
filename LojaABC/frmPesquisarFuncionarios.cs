@@ -110,5 +110,12 @@ namespace LojaABC
             abrir.Show();
             this.Hide();
         }
+
+        private void btnVoltar_Click(object sender, EventArgs e)
+        {
+            frmFuncionarios abrir = new frmFuncionarios();
+            abrir.Show();
+            this.Hide();
+        }
     }
 }
