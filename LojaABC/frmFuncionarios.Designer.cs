@@ -101,7 +101,7 @@ namespace LojaABC
             // 
             // mskCelular
             // 
-            this.mskCelular.Location = new System.Drawing.Point(542, 73);
+            this.mskCelular.Location = new System.Drawing.Point(543, 73);
             this.mskCelular.Mask = "99999-9999";
             this.mskCelular.Name = "mskCelular";
             this.mskCelular.Size = new System.Drawing.Size(99, 26);

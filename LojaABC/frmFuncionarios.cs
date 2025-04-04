@@ -9,6 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+//importando a bliblioteca do banco de dados
+using MySql.Data.MySqlClient;
 
 namespace LojaABC
 {
@@ -36,7 +38,7 @@ namespace LojaABC
             //executando desabilitar os campos
             desabilitarCampos();
             txtNome.Text = descricao;
-            habilitarCampos_pesquisar();            
+            habilitarCampos_pesquisar();
         }
 
 
@@ -201,5 +203,9 @@ namespace LojaABC
             abrir.Show();
             this.Hide();
         }
+
+        public void cadastrarFuncionarios()
+        {
+                  }
     }
 }
