@@ -36,6 +36,7 @@ namespace LojaABC
             //executando desabilitar os campos
             desabilitarCampos();
             txtNome.Text = descricao;
+            habilitarCampos_pesquisar();            
         }
 
 
@@ -101,6 +102,33 @@ namespace LojaABC
             btnExcluir.Enabled = false;
             btnLimpar.Enabled = true;
 
+            btnNovo.Enabled = false;
+
+            txtNome.Focus();
+        }
+
+        //Habilitar os campos pesquisar
+        public void habilitarCampos_pesquisar()
+        {
+            txtNome.Enabled = true;
+            txtEmail.Enabled = true;
+            mskCPF.Enabled = true;
+            dtpDataNascimento.Enabled = true;
+            mskCelular.Enabled = true;
+            gpbSexo.Enabled = true;
+
+            txtLogradouro.Enabled = true;
+            txtNumero.Enabled = true;
+            mskCEP.Enabled = true;
+            txtCidade.Enabled = true;
+            txtEsdado.Enabled = true;
+            cbbUF.Enabled = true;
+            txtComplemento.Enabled = true;
+
+            btnCadastrar.Enabled = false;
+            btnAlterar.Enabled = true;
+            btnExcluir.Enabled = true;
+            btnLimpar.Enabled = true;
             btnNovo.Enabled = false;
 
             txtNome.Focus();
