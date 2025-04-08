@@ -46,3 +46,7 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\De
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.csproj.Up2Date
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.exe
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\MosaicoSolutions.ViaCep.dll
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.pdb
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.xml
