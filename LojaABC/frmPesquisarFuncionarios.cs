@@ -27,13 +27,13 @@ namespace LojaABC
         {
             InitializeComponent();
             desabilitarCampos();
-            
+
         }
         public void desabilitarCampos()
         {
             rdbCodigo.Checked = false;
             rdbNome.Checked = false;
-           
+
         }
 
         private void frmPesquisarFuncionarios_Load(object sender, EventArgs e)
@@ -83,7 +83,7 @@ namespace LojaABC
         public void pesquisarPorCodigo(int codigo)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "select * from tbFuncionarios where codFunc = @codFunc;";
+            comm.CommandText = "select nome from tbFuncionarios where codFunc = @codFunc;";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
@@ -94,18 +94,49 @@ namespace LojaABC
             DR = comm.ExecuteReader();
             DR.Read();
 
+            ltbPesquisar.Items.Add(DR.GetString(0));
 
 
+            Conexao.fecharConexao();
+        }
+
+        public void pesquisarPorNome(string descricao)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select nome from tbFuncionarios where nome like '%" + descricao + "%';";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = descricao;
+
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+
+            while (DR.Read())
+            {
+                ltbPesquisar.Items.Add((DR.GetString(0)));
+            }
 
             Conexao.fecharConexao();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
         {
-            ltbPesquisar.Items.Clear();
-            ltbPesquisar.Items.Add(txtDescricao.Text);
-            limparCampos_pesquisar();
-           
+            //ltbPesquisar.Items.Clear();
+            //ltbPesquisar.Items.Add(txtDescricao.Text);
+            //limparCampos_pesquisar();
+            if (rdbCodigo.Checked)
+            {
+                pesquisarPorCodigo(Convert.ToInt32(txtDescricao.Text));
+            }
+            if (rdbNome.Checked)
+            {
+                pesquisarPorNome(txtDescricao.Text);
+            }
+
+
         }
 
         private void rdbCodigo_CheckedChanged(object sender, EventArgs e)
