@@ -3,16 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|c:\\users\\laercio.nsilva\\documents\\visual studio 2019\\transformese\\lojaabc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|c:\\users\\laercio.nsilva\\documents\\visual studio 2019\\transformese\\lojaabc\\frmfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|c:\\users\\laercio.nsilva\\documents\\visual studio 2019\\transformese\\lojaabc\\frmpesquisarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmpesquisarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|c:\\users\\laercio.nsilva\\documents\\visual studio 2019\\transformese\\lojaabc\\frmpesquisarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmpesquisarfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|c:\\users\\laercio.nsilva\\documents\\visual studio 2019\\transformese\\lojaabc\\frmfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{4DBC6794-A1C5-4CDD-885E-2C3A3E28B7B9}|LojaABC\\LojaABC.csproj|solutionrelative:lojaabc\\frmfuncionarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,39 +23,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\Program.cs",
-              "RelativeDocumentMoniker": "LojaABC\\Program.cs",
-              "ToolTip": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\Program.cs",
-              "RelativeToolTip": "LojaABC\\Program.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAcwBIAAAAvAAAAAAAAAA==",
+              "Title": "frmFuncionarios.cs",
+              "DocumentMoniker": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmFuncionarios.cs",
+              "RelativeDocumentMoniker": "LojaABC\\frmFuncionarios.cs",
+              "ToolTip": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmFuncionarios.cs",
+              "RelativeToolTip": "LojaABC\\frmFuncionarios.cs",
+              "ViewState": "AgIAALUBAAAAAAAAAADwv8ABAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:51:32.286Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmPesquisarFuncionarios.cs",
-              "DocumentMoniker": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmPesquisarFuncionarios.cs",
-              "RelativeDocumentMoniker": "LojaABC\\frmPesquisarFuncionarios.cs",
-              "ToolTip": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmPesquisarFuncionarios.cs",
-              "RelativeToolTip": "LojaABC\\frmPesquisarFuncionarios.cs",
-              "ViewState": "AgIAAHoAAAAAAAAAAAAIwIoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:15:07.832Z",
+              "WhenOpened": "2025-04-10T19:26:05.972Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmPesquisarFuncionarios.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmPesquisarFuncionarios.cs",
-              "RelativeDocumentMoniker": "LojaABC\\frmPesquisarFuncionarios.cs",
-              "ToolTip": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmPesquisarFuncionarios.cs [Design]",
-              "RelativeToolTip": "LojaABC\\frmPesquisarFuncionarios.cs [Design]",
+              "Title": "frmFuncionarios.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmFuncionarios.cs",
+              "RelativeDocumentMoniker": "LojaABC\\frmFuncionarios.cs",
+              "ToolTip": "C:\\Users\\laercio.nsilva\\Documents\\Visual Studio 2019\\TransformeSe\\LojaABC\\frmFuncionarios.cs [Design]",
+              "RelativeToolTip": "LojaABC\\frmFuncionarios.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-10T17:15:04.628Z",
+              "WhenOpened": "2025-04-10T19:25:59.887Z",
               "EditorCaption": " [Design]"
             }
           ]

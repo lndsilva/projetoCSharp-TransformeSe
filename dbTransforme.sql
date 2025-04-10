@@ -22,4 +22,28 @@ uf char(2),
 primary key(codFunc)
 );
 
+-- cadastrando funcionarios
+
 -- insert into tbFuncionarios(nome,email,cpf,dataNasc,telCel,sexo,logradouro,cep,numero,complemento,bairro,cidade,uf)values();
+
+-- busca por código
+
+select nome from tbFuncionarios where codFunc = 1;
+
+-- busca por nome
+
+select nome from tbFuncionarios where nome like '%a%';
+
+-- alterar funcionarios
+
+update tbFuncionarios set nome = nome, email = email, 
+	cpf = cpf, dataNasc = dataNasc, telCel = telCel,
+	 sexo = sexo, logradouro=logradouro,
+	  cep = cep, numero = numero,
+	   complemento = complemento, 
+	   bairro = bairro, cidade = cidade, uf = uf 
+	   where codFunc = codFunc;
+
+-- excluir funcionarios
+
+delete from tbFuncionarios where codFunc = codFunc;
