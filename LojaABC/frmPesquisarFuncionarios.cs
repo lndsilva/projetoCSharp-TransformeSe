@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace LojaABC
 {
@@ -76,6 +77,27 @@ namespace LojaABC
             txtDescricao.Clear();
             txtDescricao.Focus();
             txtDescricao.Enabled = false;
+        }
+
+        //criando o método para pesquisar por código
+        public void pesquisarPorCodigo(int codigo)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbFuncionarios where codFunc = @codFunc;";
+            comm.CommandType = CommandType.Text;
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codigo;
+            comm.Connection = Conexao.obterConexao();
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+
+
+
+
+            Conexao.fecharConexao();
         }
 
         private void btnPesquisar_Click(object sender, EventArgs e)
