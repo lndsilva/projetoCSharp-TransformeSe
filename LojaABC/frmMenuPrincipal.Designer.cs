@@ -34,7 +34,7 @@ namespace LojaABC
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.btnFuncionarios = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
+            this.btnUsuarios = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -102,20 +102,21 @@ namespace LojaABC
             this.btnFuncionarios.UseVisualStyleBackColor = true;
             this.btnFuncionarios.Click += new System.EventHandler(this.btnFuncionarios_Click);
             // 
-            // button5
+            // btnUsuarios
             // 
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.Location = new System.Drawing.Point(588, 248);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(173, 230);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "&Usuários";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnUsuarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUsuarios.Image = ((System.Drawing.Image)(resources.GetObject("btnUsuarios.Image")));
+            this.btnUsuarios.ImageAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnUsuarios.Location = new System.Drawing.Point(588, 248);
+            this.btnUsuarios.Name = "btnUsuarios";
+            this.btnUsuarios.Size = new System.Drawing.Size(173, 230);
+            this.btnUsuarios.TabIndex = 7;
+            this.btnUsuarios.Text = "&Usuários";
+            this.btnUsuarios.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnUsuarios.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btnUsuarios.UseVisualStyleBackColor = true;
+            this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
             // 
             // button6
             // 
@@ -183,7 +184,7 @@ namespace LojaABC
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 561);
             this.Controls.Add(this.btnVoltar);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnUsuarios);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button8);
@@ -208,7 +209,7 @@ namespace LojaABC
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button btnFuncionarios;
-        private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.Button btnUsuarios;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button8;

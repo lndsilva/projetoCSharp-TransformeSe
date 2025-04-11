@@ -50,3 +50,4 @@ C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\De
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.dll
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.pdb
 C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\bin\Debug\Newtonsoft.Json.xml
+C:\Users\laercio.nsilva\Documents\Visual Studio 2019\TransformeSe\LojaABC\obj\Debug\LojaABC.frmGerenciarUsuarios.resources

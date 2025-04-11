@@ -353,7 +353,9 @@ namespace LojaABC
             }
             else
             {
-                if (alterarFuncionarios(Convert.ToInt32(txtCodigo.Text)) == 1)
+                int resp = alterarFuncionarios(Convert.ToInt32(txtCodigo.Text));
+
+                if (resp == 1)
                 {
                     MessageBox.Show("Alterado com sucesso!!!");
                     limparCampos();
@@ -373,11 +375,12 @@ namespace LojaABC
         public int alterarFuncionarios(int codFunc)
         {
             MySqlCommand comm = new MySqlCommand();
-            comm.CommandText = "update tbFuncionarios set nome = @nome, email = @email, dataNasc = @dataNasc, telCel = @telCel, sexo = @sexo, logradouro = @logradouro, cep = @cep, numero = @numero, complemento = @complemento, bairro = @bairro, cidade = @cidade, uf = @uf where codFunc = codFunc;";
+            comm.CommandText = "update tbFuncionarios set nome = 'Maria da silva', email = 'maria', \r\n\tcpf = '1331313', dataNasc = '2025/04/10', telCel = '15241',\r\n\t sexo = 'F', logradouro='teste',\r\n\t  cep = '04750-000', numero = '10',\r\n\t   complemento = 'casa', \r\n\t   bairro = 'sp', cidade = 'sp', uf = 'sp' \r\n\t   where codFunc = 2;";
             comm.CommandType = CommandType.Text;
 
             comm.Parameters.Clear();
 
+            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codFunc;
             comm.Parameters.Add("@nome", MySqlDbType.VarChar, 100).Value = txtNome.Text;
             comm.Parameters.Add("@email", MySqlDbType.VarChar, 100).Value = txtEmail.Text;
             comm.Parameters.Add("@cpf", MySqlDbType.VarChar, 14).Value = mskCPF.Text;
@@ -405,7 +408,7 @@ namespace LojaABC
             comm.Parameters.Add("@bairro", MySqlDbType.VarChar, 100).Value = txtBairro.Text;
             comm.Parameters.Add("@cidade", MySqlDbType.VarChar, 100).Value = txtCidade.Text;
             comm.Parameters.Add("@uf", MySqlDbType.VarChar, 100).Value = cbbUF.Text;
-            comm.Parameters.Add("@codFunc", MySqlDbType.Int32).Value = codFunc;
+            
 
             comm.Connection = Conexao.obterConexao();
 

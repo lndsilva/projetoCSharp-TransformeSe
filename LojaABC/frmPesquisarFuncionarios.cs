@@ -93,11 +93,20 @@ namespace LojaABC
             MySqlDataReader DR;
             DR = comm.ExecuteReader();
             DR.Read();
-
-            ltbPesquisar.Items.Add(DR.GetString(0));
+            try
+            {
+                ltbPesquisar.Items.Add(DR.GetString(0));
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Registro não encontrado");
+                txtDescricao.Focus();
+                txtDescricao.Clear();
+            }
 
 
             Conexao.fecharConexao();
+
         }
 
         public void pesquisarPorNome(string descricao)
