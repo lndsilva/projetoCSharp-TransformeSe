@@ -38,6 +38,8 @@
             this.btnCadastrar = new System.Windows.Forms.Button();
             this.btnNovo = new System.Windows.Forms.Button();
             this.gpbDadosUsuario = new System.Windows.Forms.GroupBox();
+            this.lblFuncionarios = new System.Windows.Forms.Label();
+            this.cbbFuncionarios = new System.Windows.Forms.ComboBox();
             this.txtRepetirSenha = new System.Windows.Forms.TextBox();
             this.lblRepetirSenha = new System.Windows.Forms.Label();
             this.txtSenha = new System.Windows.Forms.TextBox();
@@ -46,8 +48,6 @@
             this.lblUsuario = new System.Windows.Forms.Label();
             this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblCodigo = new System.Windows.Forms.Label();
-            this.cbbFuncionarios = new System.Windows.Forms.ComboBox();
-            this.lblFuncionarios = new System.Windows.Forms.Label();
             this.pnlCRUD.SuspendLayout();
             this.gpbDadosUsuario.SuspendLayout();
             this.SuspendLayout();
@@ -181,6 +181,24 @@
             this.gpbDadosUsuario.TabStop = false;
             this.gpbDadosUsuario.Text = "Dados do usuário";
             // 
+            // lblFuncionarios
+            // 
+            this.lblFuncionarios.AutoSize = true;
+            this.lblFuncionarios.Location = new System.Drawing.Point(370, 44);
+            this.lblFuncionarios.Name = "lblFuncionarios";
+            this.lblFuncionarios.Size = new System.Drawing.Size(100, 20);
+            this.lblFuncionarios.TabIndex = 8;
+            this.lblFuncionarios.Text = "Funcionários";
+            // 
+            // cbbFuncionarios
+            // 
+            this.cbbFuncionarios.FormattingEnabled = true;
+            this.cbbFuncionarios.Location = new System.Drawing.Point(483, 41);
+            this.cbbFuncionarios.Name = "cbbFuncionarios";
+            this.cbbFuncionarios.Size = new System.Drawing.Size(212, 28);
+            this.cbbFuncionarios.TabIndex = 7;
+            this.cbbFuncionarios.SelectedIndexChanged += new System.EventHandler(this.cbbFuncionarios_SelectedIndexChanged);
+            // 
             // txtRepetirSenha
             // 
             this.txtRepetirSenha.Font = new System.Drawing.Font("Wingdings", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(2)));
@@ -253,23 +271,6 @@
             this.lblCodigo.Size = new System.Drawing.Size(59, 20);
             this.lblCodigo.TabIndex = 0;
             this.lblCodigo.Text = "Código";
-            // 
-            // cbbFuncionarios
-            // 
-            this.cbbFuncionarios.FormattingEnabled = true;
-            this.cbbFuncionarios.Location = new System.Drawing.Point(483, 41);
-            this.cbbFuncionarios.Name = "cbbFuncionarios";
-            this.cbbFuncionarios.Size = new System.Drawing.Size(212, 28);
-            this.cbbFuncionarios.TabIndex = 7;
-            // 
-            // lblFuncionarios
-            // 
-            this.lblFuncionarios.AutoSize = true;
-            this.lblFuncionarios.Location = new System.Drawing.Point(370, 44);
-            this.lblFuncionarios.Name = "lblFuncionarios";
-            this.lblFuncionarios.Size = new System.Drawing.Size(100, 20);
-            this.lblFuncionarios.TabIndex = 8;
-            this.lblFuncionarios.Text = "Funcionários";
             // 
             // frmGerenciarUsuarios
             // 

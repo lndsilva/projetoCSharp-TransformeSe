@@ -37,6 +37,9 @@ insert into tbUsuarios(nome,senha,codFunc)values();
 
 -- insert into tbFuncionarios(nome,email,cpf,dataNasc,telCel,sexo,logradouro,cep,numero,complemento,bairro,cidade,uf)values();
 
+insert into tbUsuarios(nome,senha,codFunc)
+	values('adm','adm',4);
+
 -- busca por código
 
 select nome from tbFuncionarios where codFunc = 1;
@@ -52,3 +55,11 @@ select nome from tbFuncionarios where nome like '%a%';
 -- excluir funcionarios
 
 -- delete from tbFuncionarios where codFunc = codFunc;
+
+-- pesquisa em tabelas ligadas com chave primaria e estrangeira - join
+
+-- inner join
+
+select usu.codUsu,usu.nome,usu.senha from tbUsuarios as usu inner join tbFuncionarios as func on usu.codFunc = func.codFunc where func.codFunc = 4;
+
+select * from tbUsuarios where nome = 'adm' and senha = 'adm';

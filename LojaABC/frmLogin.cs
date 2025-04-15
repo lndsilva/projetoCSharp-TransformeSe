@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using MySql.Data.MySqlClient;
 
 namespace LojaABC
 {
@@ -40,7 +41,8 @@ namespace LojaABC
             usuario = txtUsuario.Text;
             senha = txtSenha.Text;
 
-            if (usuario.Equals("senac") && senha.Equals("senac"))
+            //if (usuario.Equals("senac") && senha.Equals("senac"))
+            if (acessaSistema(usuario,senha))
             {
                frmMenuPrincipal abrir = new frmMenuPrincipal();
                 abrir.Show();
@@ -90,5 +92,29 @@ namespace LojaABC
             int MenuCount = GetMenuItemCount(hMenu) - 1;
             RemoveMenu(hMenu, MenuCount, MF_BYCOMMAND);
         }
+        //acessando sistema
+        public bool acessaSistema(string usuario,string senha)
+        {
+            MySqlCommand comm = new MySqlCommand();
+            comm.CommandText = "select * from tbUsuarios where nome = @nome and senha = @senha;";
+            comm.CommandType = CommandType.Text;
+            comm.Connection = Conexao.obterConexao();
+
+            comm.Parameters.Clear();
+            comm.Parameters.Add("@nome",MySqlDbType.VarChar,30).Value = usuario;
+            comm.Parameters.Add("@senha",MySqlDbType.VarChar,12).Value = senha;
+
+            MySqlDataReader DR;
+            DR = comm.ExecuteReader();
+            DR.Read();
+            
+            bool resp = DR.HasRows;
+
+            Conexao.fecharConexao();
+
+            return resp;
+
+        }
+
     }
 }
